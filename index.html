@@ -6,22 +6,20 @@
 <title>Dra. Rosiane Mendes — Biomédica Esteta em São Lucas, São Paulo</title>
 <meta name="description" content="Biomédica esteta em São Lucas, Zona Leste de São Paulo. Toxina botulínica, preenchimento, bioestimulador, skinbooster e tratamentos corporais. CRBM 40502.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.rosianemendesestetica.com.br/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Dra. Rosiane Mendes Estética">
 <meta property="og:title" content="Dra. Rosiane Mendes — Biomédica Esteta em São Lucas">
 <meta property="og:description" content="Tratamentos estéticos com avaliação individual e foco em resultado natural. CRBM 40502.">
-<meta property="og:url" content="https://www.rosianemendesestetica.com.br/">
-<meta property="og:image" content="https://www.rosianemendesestetica.com.br/assets/img/og-cover.jpg">
+<meta property="og:image" content="hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FAF7F3">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="icon" href="hero.png" type="image/png">
 
 <script type="application/ld+json">
 {
@@ -29,8 +27,6 @@
   "@type": "MedicalClinic",
   "name": "Dra. Rosiane Mendes Estética",
   "description": "Clínica de estética em São Lucas, São Paulo, especializada em procedimentos injetáveis faciais e tratamentos corporais.",
-  "url": "https://www.rosianemendesestetica.com.br/",
-  "image": "https://www.rosianemendesestetica.com.br/assets/img/og-cover.jpg",
   "telephone": "+55-11-96783-5551",
   "priceRange": "$$",
   "address": {
@@ -94,11 +90,6 @@
 </script>
 
 <style>
-/* ============================================================
-   DRA. ROSIANE MENDES — ESTÉTICA
-   Tipografia: Lora (títulos) + Work Sans (texto)
-   ============================================================ */
-
 :root{
   --bg:#FAF7F3;
   --bg-soft:#F3EBE3;
@@ -187,7 +178,6 @@ p{margin:0 0 1em}
 .center{text-align:center}
 .center .lead{margin-left:auto;margin-right:auto}
 
-/* ---------- Botões ---------- */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -214,7 +204,6 @@ p{margin:0 0 1em}
 .btn--light:hover{background:var(--gold-soft);border-color:var(--gold-soft);color:var(--ink)}
 .btn--sm{padding:.85em 1.5em;font-size:.75rem}
 
-/* ---------- Topbar ---------- */
 .topbar{
   background:var(--ink);
   color:rgba(243,235,227,.82);
@@ -227,7 +216,6 @@ p{margin:0 0 1em}
 }
 .topbar a{color:var(--gold-soft);text-decoration:underline;text-underline-offset:3px}
 
-/* ---------- Header ---------- */
 .header{
   position:sticky;
   top:0;
@@ -248,6 +236,7 @@ p{margin:0 0 1em}
   line-height:1.1;
   color:var(--ink);
   letter-spacing:-.005em;
+  flex-shrink:0;
 }
 .logo span{
   display:block;
@@ -311,12 +300,33 @@ p{margin:0 0 1em}
 }
 .mobile-nav .btn{font-family:var(--sans);font-size:.8rem;margin-top:10px}
 
-/* ---------- Hero ---------- */
+.frame{
+  position:relative;
+  background:var(--nude);
+  overflow:hidden;
+  margin:0;
+}
+.frame img{width:100%;height:100%;display:block}
+.frame--cover img{object-fit:cover;object-position:center}
+.frame--contain{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px;
+}
+.frame--contain img{object-fit:contain;object-position:center}
+.frame--4x5{aspect-ratio:4/5}
+
 .hero{
   background:linear-gradient(180deg,var(--bg),var(--bg-soft));
   padding:clamp(44px,5.5vw,78px) 0;
 }
-.hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,60px);align-items:center}
+.hero__grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:clamp(28px,4vw,60px);
+  align-items:center;
+}
 .hero h1 em{color:var(--gold);font-style:italic;font-weight:500}
 .hero__sub{
   font-size:clamp(1rem,1.4vw,1.1rem);
@@ -350,10 +360,9 @@ p{margin:0 0 1em}
 .credential__text{font-size:.87rem;line-height:1.6;color:var(--muted)}
 .credential__text strong{display:block;font-weight:600;color:var(--ink);margin-bottom:2px}
 
-.hero__media{aspect-ratio:4/5;overflow:hidden;background:var(--nude)}
-.hero__media img{width:100%;height:100%;object-fit:cover}
+.hero__media{aspect-ratio:4/5}
+.hero__media img{object-position:center 42%}
 
-/* ---------- Selos ---------- */
 .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .trust__grid{display:grid;grid-template-columns:repeat(4,1fr)}
 .trust__item{
@@ -368,7 +377,6 @@ p{margin:0 0 1em}
 }
 .trust__item + .trust__item{border-left:1px solid var(--line)}
 
-/* ---------- Cards de procedimento ---------- */
 .cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -376,9 +384,15 @@ p{margin:0 0 1em}
   background:var(--line);
   border:1px solid var(--line);
   margin-top:2.4em;
-  align-items:start;
+  align-items:stretch;
 }
-.card{background:var(--bg);padding:28px 24px;transition:background .3s var(--ease)}
+.card{
+  background:var(--bg);
+  padding:28px 24px;
+  display:flex;
+  flex-direction:column;
+  transition:background .3s var(--ease);
+}
 .card:hover{background:var(--bg-soft)}
 .card__num{font-family:var(--serif);font-size:.82rem;font-weight:500;color:var(--gold)}
 .card h3{margin:.5em 0 .45em;font-size:1.12rem;font-weight:600;line-height:1.4}
@@ -408,6 +422,7 @@ p{margin:0 0 1em}
 .card__ficha dd{margin:0;text-align:right;font-weight:500;color:var(--ink)}
 
 .card__cta{
+  margin-top:auto;
   font-size:.75rem;
   font-weight:500;
   letter-spacing:.09em;
@@ -420,7 +435,6 @@ p{margin:0 0 1em}
 .card__cta::after{content:'→';transition:transform .3s var(--ease)}
 .card:hover .card__cta::after{transform:translateX(4px)}
 
-/* ---------- Faixa CTA ---------- */
 .cta-band{
   background:var(--bg-soft);
   border-top:1px solid var(--line);
@@ -431,44 +445,42 @@ p{margin:0 0 1em}
 .cta-band h2{margin:0;font-size:clamp(1.35rem,2.2vw,1.75rem)}
 .cta-band p{margin:.5em 0 0;font-size:.94rem;color:var(--muted);max-width:48ch;line-height:1.7}
 
-/* ---------- Resultados ---------- */
 .results{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:clamp(20px,2.4vw,30px);
+  gap:clamp(18px,2.2vw,28px);
   margin-top:2.6em;
-  align-items:start;
+  align-items:stretch;
 }
 .result{
   margin:0;
-  background:var(--nude);
-  border:1px solid var(--line);
-}
-.result img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-.result figcaption{
+  display:flex;
+  flex-direction:column;
   background:var(--bg);
+  border:1px solid var(--line);
+  transition:border-color .3s var(--ease);
+}
+.result:hover{border-color:var(--nude-deep)}
+.result .frame{flex:1}
+.result figcaption{
   border-top:1px solid var(--line);
   padding:14px 16px;
-  font-size:.76rem;
+  text-align:center;
+  font-size:.74rem;
   font-weight:500;
-  letter-spacing:.08em;
+  letter-spacing:.09em;
   text-transform:uppercase;
   color:var(--gold);
   line-height:1.5;
 }
 .result-note{
-  margin-top:1.6em;
+  margin-top:1.8em;
   font-size:.83rem;
   color:var(--muted);
   line-height:1.7;
   max-width:70ch;
 }
 
-/* ---------- Depoimentos ---------- */
 .quotes{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -518,10 +530,20 @@ p{margin:0 0 1em}
   margin-top:3px;
 }
 
-/* ---------- Sobre ---------- */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4.5vw,70px);align-items:center}
-.split__media{aspect-ratio:4/5;background:var(--nude);overflow:hidden}
-.split__media img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(30px,4.5vw,70px);
+  align-items:center;
+}
+.split.no-media{
+  grid-template-columns:1fr;
+  max-width:760px;
+  margin:0 auto;
+}
+.split.no-media .split__body p{max-width:72ch}
+.about-media{aspect-ratio:4/5}
+.about-media img{object-position:center 12%}
 .split__body p{color:var(--ink-soft);font-size:1rem;line-height:1.8}
 .signature{
   font-family:var(--serif);
@@ -532,7 +554,6 @@ p{margin:0 0 1em}
   margin-top:1.1em;
 }
 
-/* ---------- Etapas ---------- */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3.5vw,44px);margin-top:2.4em}
 .step{padding-top:22px;border-top:1px solid var(--nude-deep)}
 .step__label{
@@ -546,7 +567,6 @@ p{margin:0 0 1em}
 .step h3{margin:.6em 0 .4em;font-size:1.06rem;font-weight:600}
 .step p{font-size:.94rem;color:var(--muted);margin:0;line-height:1.7}
 
-/* ---------- FAQ ---------- */
 .faq{max-width:780px;margin:2.2em auto 0}
 .faq details{border-bottom:1px solid var(--line)}
 .faq details:first-child{border-top:1px solid var(--line)}
@@ -576,9 +596,8 @@ p{margin:0 0 1em}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{margin:0 0 20px;color:var(--muted);font-size:.96rem;line-height:1.8;max-width:66ch}
 
-/* ---------- Localização ---------- */
 .local{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:var(--bg)}
-.local__info{padding:clamp(26px,3.5vw,48px)}
+.local__info{padding:clamp(26px,3.5vw,48px);display:flex;flex-direction:column}
 .local__map{min-height:380px;background:var(--nude)}
 .local__map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(.97)}
 
@@ -597,7 +616,6 @@ p{margin:0 0 1em}
 .info-row__value{font-size:.94rem;color:var(--ink-soft);line-height:1.7}
 .info-row__value a{border-bottom:1px solid var(--gold-soft)}
 
-/* ---------- CTA final ---------- */
 .cta-final{text-align:center}
 .cta-final h2{max-width:20ch;margin-left:auto;margin-right:auto}
 .cta-final p{
@@ -609,7 +627,6 @@ p{margin:0 0 1em}
   line-height:1.75;
 }
 
-/* ---------- Privacidade ---------- */
 .privacy{border-top:1px solid var(--line);background:var(--bg-soft)}
 .privacy summary{
   cursor:pointer;
@@ -633,7 +650,6 @@ p{margin:0 0 1em}
   margin:1.4em 0 .4em;
 }
 
-/* ---------- Footer ---------- */
 .footer{background:var(--ink);color:rgba(243,235,227,.78);padding:56px 0 26px}
 .footer__grid{
   display:grid;
@@ -683,7 +699,6 @@ p{margin:0 0 1em}
   line-height:1.7;
 }
 
-/* ---------- WhatsApp ---------- */
 .wa-float{
   position:fixed;
   right:18px;bottom:18px;
@@ -699,11 +714,9 @@ p{margin:0 0 1em}
 .wa-float:hover{transform:scale(1.07)}
 .wa-float svg{width:26px;height:26px;fill:#fff}
 
-/* ---------- Reveal ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.is-visible{opacity:1;transform:none}
 
-/* ---------- Acessibilidade ---------- */
 .skip-link{
   position:absolute;
   left:-9999px;
@@ -723,18 +736,17 @@ p{margin:0 0 1em}
   .reveal{opacity:1;transform:none}
 }
 
-/* ---------- Responsivo ---------- */
 @media (max-width:1024px){
   .nav,.header .btn{display:none}
   .burger{display:flex}
   .hero__grid{grid-template-columns:1fr;gap:30px}
-  .hero__media{aspect-ratio:16/11;order:2}
+  .hero__media{aspect-ratio:4/5;order:2;max-width:520px;margin:0 auto;width:100%}
   .hero__body{order:1}
   .cards{grid-template-columns:repeat(2,1fr)}
-  .results{grid-template-columns:1fr;gap:26px;max-width:520px;margin-left:auto;margin-right:auto}
+  .results{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto;gap:22px}
   .quotes{grid-template-columns:1fr}
   .split{grid-template-columns:1fr}
-  .split__media{aspect-ratio:16/11}
+  .about-media{aspect-ratio:4/5;max-width:460px;margin:0 auto;width:100%}
   .steps{grid-template-columns:1fr}
   .local{grid-template-columns:1fr}
   .local__map{min-height:290px;order:2}
@@ -814,7 +826,6 @@ p{margin:0 0 1em}
 
 <main id="conteudo">
 
-<!-- HERO -->
 <section class="hero" id="top">
   <div class="container hero__grid">
     <div class="hero__body">
@@ -839,13 +850,15 @@ p{margin:0 0 1em}
       </div>
     </div>
 
-    <figure class="hero__media">
-      <img src="assets/img/hero.jpg" alt="Ambiente da clínica Dra. Rosiane Mendes Estética" width="1000" height="1250" fetchpriority="high">
+    <figure class="frame frame--cover frame--4x5 hero__media">
+      <img src="hero.png"
+           alt="Ambiente do consultório da Dra. Rosiane Mendes Estética"
+           width="864" height="1536"
+           fetchpriority="high" decoding="async">
     </figure>
   </div>
 </section>
 
-<!-- SELOS -->
 <div class="trust">
   <div class="container">
     <div class="trust__grid">
@@ -857,7 +870,6 @@ p{margin:0 0 1em}
   </div>
 </div>
 
-<!-- PROCEDIMENTOS -->
 <section class="section" id="procedimentos">
   <div class="container">
     <div class="center">
@@ -1019,7 +1031,6 @@ p{margin:0 0 1em}
   </div>
 </section>
 
-<!-- CTA INTERMEDIÁRIO -->
 <div class="cta-band">
   <div class="container cta-band__inner">
     <div>
@@ -1030,7 +1041,6 @@ p{margin:0 0 1em}
   </div>
 </div>
 
-<!-- RESULTADOS -->
 <section class="section" id="resultados">
   <div class="container">
     <div class="center">
@@ -1044,17 +1054,32 @@ p{margin:0 0 1em}
 
     <div class="results">
       <figure class="result">
-        <img src="assets/img/resultado-01.jpg" alt="Antes e depois de tratamento do sulco nasolabial" width="1024" height="1536" loading="lazy">
+        <div class="frame frame--contain frame--4x5">
+          <img src="resultado-01.png"
+               alt="Antes e depois de tratamento do sulco nasolabial"
+               width="1024" height="1536"
+               loading="lazy" decoding="async">
+        </div>
         <figcaption>Sulco nasolabial · preenchimento</figcaption>
       </figure>
 
       <figure class="result">
-        <img src="assets/img/resultado-02.jpg" alt="Antes e depois de preenchimento labial" width="1536" height="1024" loading="lazy">
+        <div class="frame frame--contain frame--4x5">
+          <img src="resultado-02.png"
+               alt="Antes e depois de preenchimento labial"
+               width="1536" height="1024"
+               loading="lazy" decoding="async">
+        </div>
         <figcaption>Lábios · preenchimento</figcaption>
       </figure>
 
       <figure class="result">
-        <img src="assets/img/resultado-03.jpg" alt="Antes e depois de aplicação de toxina botulínica na glabela" width="1024" height="1024" loading="lazy">
+        <div class="frame frame--contain frame--4x5">
+          <img src="resultado-03.png"
+               alt="Antes e depois de aplicação de toxina botulínica na glabela"
+               width="1024" height="1024"
+               loading="lazy" decoding="async">
+        </div>
         <figcaption>Glabela · toxina botulínica</figcaption>
       </figure>
     </div>
@@ -1071,13 +1096,9 @@ p{margin:0 0 1em}
 </section>
 
 <!-- DEPOIMENTOS -->
-<!-- ============================================================
-     ATENÇÃO: os três depoimentos abaixo são PLACEHOLDER.
+<!-- ATENÇÃO: os três depoimentos abaixo são PLACEHOLDER.
      Substitua por avaliações reais (Google, Instagram ou relatos
-     enviados por pacientes, com autorização) antes de publicar.
-     Depoimento fictício em serviço de saúde é publicidade
-     enganosa (CDC, art. 37) e pode gerar autuação.
-     ============================================================ -->
+     enviados por pacientes, com autorização) antes de publicar. -->
 <section class="section section--soft" id="depoimentos">
   <div class="container">
     <div class="center">
@@ -1125,11 +1146,14 @@ p{margin:0 0 1em}
   </div>
 </section>
 
-<!-- SOBRE -->
 <section class="section" id="sobre">
-  <div class="container split">
-    <figure class="split__media reveal">
-      <img src="assets/img/dra-rosiane.jpg" alt="Dra. Rosiane Mendes, biomédica esteta, em seu consultório" width="1024" height="1536" loading="lazy">
+  <div class="container split" id="sobreSplit">
+    <figure class="frame frame--cover frame--4x5 about-media reveal" id="sobreFoto">
+      <img src="dra-rosiane.png"
+           alt="Dra. Rosiane Mendes, biomédica esteta, em seu consultório"
+           width="1024" height="1536"
+           loading="lazy" decoding="async"
+           onerror="var f=document.getElementById('sobreFoto');var s=document.getElementById('sobreSplit');if(f)f.style.display='none';if(s)s.classList.add('no-media');">
     </figure>
 
     <div class="split__body reveal">
@@ -1157,7 +1181,6 @@ p{margin:0 0 1em}
   </div>
 </section>
 
-<!-- ETAPAS -->
 <section class="section section--soft">
   <div class="container">
     <div class="center reveal">
@@ -1185,7 +1208,6 @@ p{margin:0 0 1em}
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section" id="duvidas">
   <div class="container">
     <div class="center reveal">
@@ -1226,7 +1248,6 @@ p{margin:0 0 1em}
   </div>
 </section>
 
-<!-- CONTATO -->
 <section class="section section--soft" id="contato">
   <div class="container">
     <div class="center reveal" style="margin-bottom:2.2em">
@@ -1282,7 +1303,6 @@ p{margin:0 0 1em}
   </div>
 </section>
 
-<!-- CTA FINAL -->
 <section class="section section--ink">
   <div class="container cta-final reveal">
     <span class="eyebrow">Primeiro passo</span>
@@ -1294,7 +1314,6 @@ p{margin:0 0 1em}
 
 </main>
 
-<!-- PRIVACIDADE -->
 <section class="privacy" id="privacidade">
   <div class="container">
     <details>
